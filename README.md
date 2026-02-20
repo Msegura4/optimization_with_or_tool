@@ -24,7 +24,7 @@ python3 -m venv env
 source env/bin/activate
 
 # Installer dépendances
-pip install streamlit ortools matplotlib pandas numpy
+pip install -r requirements.txt
 ```
 
 ## Utilisation
@@ -63,9 +63,9 @@ Paramètres configurables via l'onglet **⚙️ PARAMÈTRES** :
 
 ## Algorithmes
 
-- **CP-SAT (OR-Tools)** : Optimisation globale des tournées
-- **A\*** : Pathfinding avec évitement d'obstacles  
-- **Résolution itérative** : Détection et ajustement des collisions
+- **CP-SAT (OR-Tools)** : Optimisation globale des tournées (qui fait quoi quand)
+- **A\*** : Pathfinding avec évitement d'obstacles (intégration d'une grille de navigation précisant les obstacle             --> matrice 1 ou 0, 1 = zone de passage, 0 = obstacle) 
+- **Résolution itérative** : Détection et ajustement des collisions (départ différé des agents pour éviter les                colisions)
 
 ## Performance
 
@@ -79,8 +79,7 @@ Paramètres configurables via l'onglet **⚙️ PARAMÈTRES** :
 - OR-Tools (CP SAT)
 - Streamlit
 - Matplotlib
-- Pandas
-- NumPy
+- Manhattan distance
 - A*
 
 ## 📝 Licence
@@ -89,5 +88,5 @@ Apache License 2.0
 
 ## 👤 Auteur
 
-Math Segura
+Mathias Segura - Kémil Lamouri - Antonin Plessis
 EOF
