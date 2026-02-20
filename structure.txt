@@ -1,0 +1,54 @@
+OPTIPICK/
+│
+├── 📄 requirements.txt                   # Dépendances Python
+├── 📄 .gitignore                         # fichiers ignorés dans le push
+├── 📄 structure.txt                      # structure du projet
+│
+├── DONNÉES JSON
+│   ├── warehouse.json                    # Entrepôt (dimensions, zones, navigation_grid)
+│   ├── products.json                     # Produits (position, poids, zone)
+│   ├── agents.json                       # Agents (type, vitesse, capacité)
+│   ├── orders.json                       # Commandes clients
+│   └── zones_access.json                 # Points d'accès optimaux aux zones
+│   └── default_params.json               # sauvegarde des paramètres par défaut que l'on peut enregistrer sur streamlit
+│
+├── MODULES CORE
+│   ├── loader.py                         # Chargement des données JSON
+│   │
+│   ├── distances.py                      # CALCUL DES DISTANCES
+│   │   ├── calculate_distance_matrix()   #    └─ Matrice distances tous produits
+│   │   ├── a_star_search()              #    └─ A* pathfinding avec navigation_grid
+│   │   └── manhattan_distance()          #    └─ Distance Manhattan (fallback)
+│   │
+│   ├── optimizer_mintime.py              # OR-TOOLS OPTIMISATION
+│   │   ├── optimize_routes()            #    └─ Solver CP-SAT (Google OR-Tools)
+│   │   ├── get_closest_preparation()     #    └─ Choix point dépôt optimal
+│   │   └── RESOLUTION_TIME_SECONDS       #    └─ Temps de résolution adaptatif
+│   │
+│   └── collision_checker.py              # GESTION COLLISIONS
+│       ├── calculate_agent_trajectory()  #    └─ Trajectoire minute par minute
+│       ├── calculate_path()             #    └─ A* pour trajectoires réalistes
+│       ├── detect_collisions()           #    └─ Détection collisions
+│       └── check_and_adjust_collisions() #    └─ Résolution itérative (max 100 iter)
+│
+├── VISUALISATION
+│   ├── visualize_warehouse.py            # Création carte 2D matplotlib
+│   │   ├── create_warehouse_map()       #    └─ Carte avec zones colorées
+│   │   ├── add_agent_trajectory()       #    └─ Trajectoires agents (● ◆ ★)
+│   │   └── add_warehouse_legend()        #    └─ Légende des zones
+│   │
+│   └── app.py                            # INTERFACE STREAMLIT
+│       ├── Onglet STATISTIQUES          #    └─ Coûts, temps, agents, collisions
+│       └── Onglet VISUALISATION         #    └─ Carte 2D + trajectoires
+│
+├── ORCHESTRATION
+│   ├── run_optimization.py               # Wrapper optimisation complet
+│   │   └── run_optimization(n_orders)   #    └─ Charge → Optimise → Collisions → Stats
+│   │
+│   └── main.py                           # Point d'entrée CLI
+│       └── python main.py                #    └─ Ligne de commande
+│
+└── OUTPUTS (générés)
+    ├── *.png                             # Visualisations générées
+    └── logs/                             # Logs d'exécution
+    └── .csv/                             # données sur la distribution des agents

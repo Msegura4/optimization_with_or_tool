@@ -1,0 +1,31 @@
+# OPTIPICK - Optimisation de Tournées d'Entrepôt
+# Requirements Python
+
+# === OPTIMISATION ===
+# OR-Tools pour CP-SAT solver (optimisation contraintes)
+ortools>=9.8.0
+
+# === VISUALISATION ===
+# Streamlit pour interface web interactive
+streamlit>=1.28.0
+
+# Matplotlib pour graphiques et visualisation 2D
+matplotlib>=3.7.0
+
+# Numpy pour calculs numériques
+numpy>=1.24.0
+
+# === MODULES STANDARDS PYTHON (inclus par défaut) ===
+# json (built-in)
+# sys (built-in)
+# collections (built-in)
+# datetime (built-in)
+
+# === OPTIONNEL : POUR DÉVELOPPEMENT ===
+# pytest>=7.4.0  # Tests unitaires
+# black>=23.0.0  # Formatage code
+# pylint>=2.17.0  # Linting
+
+# === NOTES ===
+# Python version requise : >= 3.8
+# Installation : pip install -r requirements.txt

@@ -1,0 +1,47 @@
+cat > .gitignore << 'EOF'
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+forgedata_env/
+*.egg-info/
+.pytest_cache/
+
+# Streamlit
+.streamlit/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Données sensibles
+*.env
+.env
+
+# Fichiers temporaires
+*.tmp
+*.bak
+*.backup
+
+# Cache
+.cache/
+EOF
+
+trash/
+versions/
+exos_projet/

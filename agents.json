@@ -1,0 +1,81 @@
+[
+  {
+    "id": "R1",
+    "type": "robot",
+    "capacity_weight": 20,
+    "capacity_volume": 30,
+    "speed": 2.0,
+    "cost_per_hour": 5,
+    "restrictions": {
+      "no_zones": ["refrigerated"],
+      "no_fragile": true,
+      "max_item_weight": 10
+    }
+  },
+  {
+    "id": "R2",
+    "type": "robot",
+    "capacity_weight": 20,
+    "capacity_volume": 30,
+    "speed": 2.0,
+    "cost_per_hour": 5,
+    "restrictions": {
+      "no_zones": ["refrigerated"],
+      "no_fragile": true,
+      "max_item_weight": 10
+    }
+  },
+  {
+    "id": "R3",
+    "type": "robot",
+    "capacity_weight": 20,
+    "capacity_volume": 30,
+    "speed": 2.0,
+    "cost_per_hour": 5,
+    "restrictions": {
+      "no_zones": ["refrigerated"],
+      "no_fragile": true,
+      "max_item_weight": 10
+    }
+  },
+  {
+    "id": "H1",
+    "type": "human",
+    "capacity_weight": 35,
+    "capacity_volume": 50,
+    "speed": 1.5,
+    "cost_per_hour": 25,
+    "restrictions": {}
+  },
+  {
+    "id": "H2",
+    "type": "human",
+    "capacity_weight": 35,
+    "capacity_volume": 50,
+    "speed": 1.5,
+    "cost_per_hour": 25,
+    "restrictions": {}
+  },
+  {
+    "id": "C1",
+    "type": "cart",
+    "capacity_weight": 50,
+    "capacity_volume": 80,
+    "speed": 1.2,
+    "cost_per_hour": 3,
+    "restrictions": {
+      "requires_human": true
+    }
+  },
+  {
+    "id": "C2",
+    "type": "cart",
+    "capacity_weight": 50,
+    "capacity_volume": 80,
+    "speed": 1.2,
+    "cost_per_hour": 3,
+    "restrictions": {
+      "requires_human": true
+    }
+  }
+]

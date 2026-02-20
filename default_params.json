@@ -1,0 +1,48 @@
+{
+  "_comment": "Param\u00e8tres par d\u00e9faut OPTIPICK - Mis \u00e0 jour",
+  "_version": "1.0",
+  "_last_updated": "2026-02-20",
+  "solver": {
+    "random_seed": 12345,
+    "num_search_workers": 9,
+    "max_time_seconds": 120
+  },
+  "collision": {
+    "max_iterations": 350,
+    "depot_time_minutes": 1
+  },
+  "costs": {
+    "robot_per_hour": 5.0,
+    "human_per_hour": 25.0,
+    "cart_per_hour": 3.0
+  },
+  "agents": {
+    "robot": {
+      "capacity_weight": 20,
+      "capacity_volume": 30,
+      "speed": 2.0
+    },
+    "human": {
+      "capacity_weight": 35,
+      "capacity_volume": 50,
+      "speed": 1.5
+    },
+    "cart": {
+      "capacity_weight": 50,
+      "capacity_volume": 80,
+      "speed": 1.2
+    }
+  },
+  "temporal": {
+    "start_hour": 9,
+    "picking_time_seconds": 60
+  },
+  "warehouse": {
+    "width": 11,
+    "height": 10,
+    "entry_point": [
+      6,
+      10
+    ]
+  }
+}
