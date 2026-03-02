@@ -1,5 +1,4 @@
-cat > README.md << 'EOF'
-# 🏭 OPTIPICK - Optimisation de Tournées d'Entrepôt
+# OPTIPICK - Optimisation de Tournées d'Entrepôt
 
 Système d'optimisation de tournées pour entrepôt utilisant **OR-Tools CP-SAT** et **A* pathfinding**.
 
